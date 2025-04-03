@@ -10,6 +10,29 @@ from sqlalchemy import Index
 import sqlalchemy.dialects.postgresql
 from sqlalchemy.dialects.postgresql.base import PGDialect
 
+import os
+import psycopg2
+
+def get_db_connection():
+    # Check if we're in production (Render)
+    if os.environ.get('RENDER'):
+        # For deployment on Render with certificate
+        cert_path = "/etc/ssl/certs/cockroach.crt"  # This should match your Mount Path
+    else:
+        # For local development
+        cert_path = os.path.join(os.environ['APPDATA'], 'postgresql', 'root.crt')
+    
+    conn = psycopg2.connect(
+        host="sunny-moth-9769.j77.aws-us-east-1.cockroachlabs.cloud",
+        port=26257,
+        dbname="your_database_name",
+        user="your_username",
+        password="your_password",
+        sslmode="verify-full",
+        sslrootcert=cert_path
+    )
+    return conn
+
 # Monkey patch the PostgreSQL dialect to handle CockroachDB version strings
 def _get_server_version_info(self, connection):
     v = connection.exec_driver_sql("SELECT version()").scalar()
