@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="inventory-header">
+  <h2>Your Shelf:</h2>
+  {% if current_user.is_authenticated %}
+  <ul>
+    {% for wine in current_user.wines %}
+        <li class="wine-item">
+            <div>
+                {{ wine.name }} - {{ wine.type }} - {{ wine.region }}
+            </div>
+            <div>
+                <form action="{{ url_for('remove_from_shelf', wine_id=wine.wine_id) }}" method="get">
+                    <input type="hidden" name="wine_id" value="{{ wine.id }}">
+                    <button type="submit">Remove</button>
+                </form>
+            </div>
+        </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>Please log in to view your shelf.</p>
+  {% endif %}
+</div>
+{% endblock content %}

@@ -1,0 +1,40 @@
+.main {
+    background-image: url('../images/brewery.jpg');
+    height: 100px;
+    z-index: 0;
+}
+
+  .bg-steel {
+    background-color: #5f788a;
+  }
+
+  .inventory-header{
+    align-content: center;
+    width: 1;
+    text-align: center;
+  }
+  
+  .site-header .navbar-nav .nav-link {
+    color: #cbd5db;
+  }
+  
+  .site-header .navbar-nav .nav-link:hover {
+    color: #ffffff;
+  }
+  
+  .site-header .navbar-nav .nav-link.active {
+    font-weight: 500;
+  }
+
+  .navbar-nav {
+    align-content: center;
+  }
+
+body {
+    overflow: hidden;
+}
+
+.red-row {
+    z-index: 2;
+    margin-top: 500px;
+}

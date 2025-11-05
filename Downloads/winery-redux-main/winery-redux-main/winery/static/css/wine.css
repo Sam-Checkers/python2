@@ -1,0 +1,131 @@
+  .red-row {
+    padding-top: 300px;
+  }
+
+  .bg-steel {
+    background-color: #5f788a;
+  }
+
+  .inventory-header{
+    align-content: center;
+    width: 1;
+    text-align: center;
+  }
+  
+  .site-header .navbar-nav .nav-link {
+    color: #cbd5db;
+  }
+  
+  .site-header .navbar-nav .nav-link:hover {
+    color: #ffffff;
+  }
+  
+  .site-header .navbar-nav .nav-link.active {
+    font-weight: 500;
+  }
+
+  .navbar-nav {
+    align-content: center;
+  }
+
+
+.pinot_noir-container {
+    position: relative;
+    display: inline-block;
+}
+
+.pinot_noir {
+    width: 140px;
+    position: relative;
+}
+
+.pinot-i {
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    left: 46%;
+    transform: translate(-50%, -50%);
+}
+
+.pinot-i:hover {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(50);
+    z-index: 2;
+  }
+
+  .pinot-button {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-65%);
+}
+
+.chardonnay-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.chardonnay {
+    width: 30px;
+    position: relative;
+}
+
+.chardonnay-i {
+    width: 25px;
+    position: absolute;
+    top: 30%;
+    left: 45.5%;
+    transform: translate(-50%, -50%);
+}
+
+.chardonnay-i:hover {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(50);
+    z-index: 2;
+  }
+
+.chardonnay-button {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.pilsner-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 23px;
+}
+
+.pilsner {
+    width: 80px;
+    position: relative;
+}
+
+.pilsner-i {
+    width: 40px;
+    position: absolute;
+    top: 30%;
+    left: 53%;
+    transform: translate(-50%, -50%);
+}
+
+.pilsner-i:hover {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(35);
+    z-index: 2;
+  }
+
+.pilsner-button {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-45%);
+}
