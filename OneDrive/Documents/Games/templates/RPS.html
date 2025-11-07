@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissors</title>
+    <style>
+    </style>
+</head>
+<body>
+    <h1>Rock-Paper-Scissors</h1>
+    <form method="post">
+        <input type="submit" name="move" value="Rock">
+        <input type="submit" name="move" value="Paper">
+        <input type="submit" name="move" value="Scissors">
+        <input type="submit" name="move" value="Gun">
+    </form>
+    
+    {% if player_move %}
+        <p>Your move: {{ player_move }}</p>
+    {% endif %}
+    {% if computer_move %}
+        <p>Computer's move: {{ computer_move }}</p>
+    {% endif %}
+    {% if outcome %}
+        <p>{{ outcome }}</p>
+    {% endif %}
+    <p>Player Score: {{ player_score }}</p>
+    <p>Computer Score: {{ computer_score }}</p>
+</body>
+</html>
